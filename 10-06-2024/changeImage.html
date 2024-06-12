@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="../ASSESTS/IMAGES/ball_flower.jpg" id="img1" alt="">
+    <strong id="change">BlueFlower</strong>
+    <button type="button" onclick="change()" >Change Image</button>
+
+    <script>
+        function change(){
+
+        
+        let flower = document.getElementById("change").innerHTML;
+
+        if (flower == "BlueFlower") {
+           
+            document.getElementById("img1").src = "../ASSESTS/IMAGES/ball_flower.jpg";
+              
+               document.getElementById("change").innerHTML="Ball-flower";
+        }
+        else if (flower == "Ball-flower") {
+           document.getElementById("img1").src="../ASSESTS/IMAGES/blue-flower.jfif";
+           
+           
+            document.getElementById("change").innerHTML = "BlueFlower";
+
+        }
+
+
+    }
+
+
+    </script>
+</body>
+
+</html>

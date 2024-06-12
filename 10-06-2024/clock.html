@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+    height: 400px;
+    width: 350px;
+    border: 2px solid grey;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    left: 500px;
+    top: 100px;
+    box-shadow: 8px 4px 142px 10px black;
+    background-image: url(../ASSESTS/IMAGES/blue-flower.jfif);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 id="d1"></h2>
+    </div>
+    <script>
+        function myClock() {
+            let mytime = new Date();
+            document.getElementById("d1").innerHTML = mytime.toLocaleTimeString();
+            //    document.getElementById("d1").innerHTML = myClock
+        }
+        // myClock()
+        setInterval(myClock, 1000);
+    </script>
+</body>
+
+</html>

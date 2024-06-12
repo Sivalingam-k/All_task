@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            margin: 50px;
+            width: 450px;
+            height: 400px;
+            border: 2px solid blue;
+        }
+
+        .btn {
+            margin: 50px;
+            width: 450px;
+            height: 400px;
+            border: 2px solid blue;
+
+        }
+
+        .btn button {
+            height: 50px;
+            width: 100px;
+            margin: 10px;
+            padding: 5px;
+
+
+        }
+
+        textarea {
+            width: 450px;
+            height: 400px;
+        }
+
+        .replacing {
+            margin: 50px;
+            width: 450px;
+            height: 400px;
+            border: 2px solid blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .replacing input {
+            width: 250px;
+            padding: 5px;
+            margin: 5px;
+
+            border-radius: 5px;
+        }
+
+        .replacing label {
+            font-size: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="content">
+            <textarea id="cont"></textarea>
+        </div>
+        <div class="replacing">
+            <label for="">Enter Replacing Text:</label>
+            <input type="text" id="old">
+            <label for="">Enter new Text:</label>
+            <input type="text" id="new">
+
+            <div class="btn">
+
+                <button type="submit" onclick="replacingOnce()">Replace Single Text</button>
+                <button type="submit" onclick="replacingAll()">Replace All Text</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+     
+
+        function replacingOnce() {
+           
+            let old_Text = document.getElementById("old").value;
+            let new_text = document.getElementById("new").value;
+            let main_cont = document.getElementById("cont").value;
+         console.log(main_cont.replace(old_Text,new_text));
+         document.getElementById("cont").value=main_cont.replace(old_Text,new_text);
+        }
+        function replacingAll(){
+            let old_Text = document.getElementById("old").value;
+            let new_text = document.getElementById("new").value;
+            let main_cont = document.getElementById("cont").value;
+         console.log(main_cont.replace(old_Text,new_text));
+         document.getElementById("cont").value=main_cont.replaceAll(old_Text,new_text);
+        }
+    </script>
+</body>
+
+</html>
